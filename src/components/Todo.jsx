@@ -1,9 +1,9 @@
 import { MdDelete, MdEdit } from "react-icons/md";
 
-function Todo({ todo, deleteTodo }) {
+function Todo({ todo, deleteTodo, toggleComplete}) {
   return (
-    <div className="todo">
-      <p>{todo.content}</p>
+    <div className={`todo ${todo.isCompleted ? "completed" : ""}`}>
+      <p onClick={() =>{toggleComplete(todo.id)}}>{todo.content}</p>
       <div>
         <MdEdit
           style={{
