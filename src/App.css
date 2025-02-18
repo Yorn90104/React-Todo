@@ -1,4 +1,21 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body{
     background-color: #3b36cc;
     color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.wrapper{
+    width: 450px;
+    padding: 30px;
+    background-color: #1a1a40;
+    border-radius: 5px;
 }
