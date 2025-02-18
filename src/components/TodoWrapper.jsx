@@ -11,7 +11,10 @@ function TodoWrapper() {
 
     const addTodo = (content) => {
         setTodos([...todos, {content: content, id: Math.random()}]);
-    }
+    };
+    const deleteTodo = (id) => {
+        setTodos(todos.filter((todo) => {return todo.id !== id}));
+    };
 
     return (
         <div className="wrapper">
@@ -19,7 +22,7 @@ function TodoWrapper() {
             <CreateFrom addTodo = {addTodo}/>
             {
                 todos.map((todo) => {
-                    return <Todo todo = {todo.content} key={todo.id}/>
+                    return <Todo todo = {todo} key={todo.id} deleteTodo = {deleteTodo}/>
                 })
             }
         </div>
